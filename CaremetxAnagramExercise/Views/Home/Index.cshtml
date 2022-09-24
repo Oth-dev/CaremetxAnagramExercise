@@ -6,9 +6,15 @@
     <h3 class="display-4">Anagrams</h3>
     <br />
     <form class="d-flex" action="/Home/CheckAnagram" method="get">
-        <input class="form-control me-2" type="text" name="text1" placeholder="First Word" required>
-        <input class="form-control me-2" type="text" name="text2" placeholder="Second Word" required>
-        <input class="btn btn-outline-success" type="submit" value="Check">
+        <div class="col-md-5 my-1">
+            <input type="text" class="form-control mb-2" name="text1" placeholder="Type the First Word" required>
+        </div>
+        <div class="col-md-5 my-1">
+            <input type="text" class="form-control mb-2" name="text2" placeholder="Type the Second Word" required>
+        </div>
+        <div class="col-md-2">
+            <input class="btn btn-success mb-2" type="submit" value="Check">
+            </div>
     </form>
     <br />
     <p style="color: @ViewBag.color">
