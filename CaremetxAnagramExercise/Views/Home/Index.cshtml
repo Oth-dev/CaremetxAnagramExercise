@@ -11,9 +11,13 @@
         <input class="btn btn-outline-success" type="submit" value="Check">
     </form>
     <br />
-        <p style="color: @ViewBag.color">
-            @ViewBag.response
+    <p style="color: @ViewBag.color">
+        @if (ViewBag.Text != null)
+        {
+            <b>@ViewBag.Text.text1</b> <span> and </span> <b>@ViewBag.Text.text2</b> @ViewBag.response
 
-        </p>
+        }
+
+    </p>
 
 </div>

@@ -7,7 +7,13 @@ namespace CaremetxAnagramExercise.Models
 {
     public class TextInput : IAnagram
     {
-        public string Text { get; set; }
+        public string text1 { get; set; }
+        public string text2 { get; set; }
+        public TextInput(string text1, string text2)
+        {
+            this.text1 = text1;
+            this.text2 = text2;
+        }
         public bool AreAnagram(string text1, string text2)
         {
             //Converting the string to an array of char and all in lower case
