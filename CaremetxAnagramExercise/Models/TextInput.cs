@@ -33,5 +33,24 @@ namespace CaremetxAnagramExercise.Models
             else
                 return false;
         }
+        public bool AreAnagram()
+        {
+            //Converting the string to an array of char and all in lower case
+            char[] array1 = this.text1.ToLower().ToCharArray();
+            char[] array2 = this.text2.ToLower().ToCharArray();
+
+            //Sort both Arrays
+            Array.Sort(array1);
+            Array.Sort(array2);
+
+            //Convert the Array of char to a string
+            string resultString1 = new string(array1);
+            string resultString2 = new string(array2);
+
+            if (resultString1 == resultString2)
+                return true;
+            else
+                return false;
+        }
     }
 }

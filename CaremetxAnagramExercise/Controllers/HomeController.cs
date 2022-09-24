@@ -26,7 +26,7 @@ namespace CaremetxAnagramExercise.Controllers
         {
             TextInput input = new TextInput(text1, text2);
             ViewBag.Text = input;
-            if(input.AreAnagram(text1,text2))
+            if(input.AreAnagram())
             {
                 ViewBag.response =" are Anagrams";
                 ViewBag.color = "green";
