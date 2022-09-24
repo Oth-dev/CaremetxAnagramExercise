@@ -14,6 +14,9 @@ namespace CaremetxAnagramExercise.Models
             this.text1 = text1;
             this.text2 = text2;
         }
+        public TextInput()
+        {
+        }
         public bool AreAnagram(string text1, string text2)
         {
             //Converting the string to an array of char and all in lower case
