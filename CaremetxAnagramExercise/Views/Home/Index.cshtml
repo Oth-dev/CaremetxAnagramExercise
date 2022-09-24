@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h3 class="display-4">Anagrams</h3>
+    <br />
+    <form class="d-flex" action="/Home/CheckAnagram" method="get">
+        <input class="form-control me-2" type="text" name="text1" placeholder="First Word" required>
+        <input class="form-control me-2" type="text" name="text2" placeholder="Second Word" required>
+        <input class="btn btn-outline-success" type="submit" value="Check">
+    </form>
+    <br />
+        <p style="color: @ViewBag.color">
+            @ViewBag.response
+
+        </p>
+
+</div>
