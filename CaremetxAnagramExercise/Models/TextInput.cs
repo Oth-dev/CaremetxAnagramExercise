@@ -19,7 +19,8 @@ namespace CaremetxAnagramExercise.Models
         }
         public bool AreAnagram(string text1, string text2)
         {
-            //check the length of both texts
+            //check the length of both texts 
+            //Space matters : 'listen' and 's ilent' are not Anagrams but 'listen' and 'silent' are Anagrams
             if(text1.Length!=text2.Length)
             {
                 return false;
@@ -48,6 +49,8 @@ namespace CaremetxAnagramExercise.Models
         public bool AreAnagram()
         {
             //check the length of both texts
+            //Space matters : 'listen' and 's ilent' are not Anagrams but 'listen' and 'silent' are Anagrams
+
             if (this.text1.Length != this.text2.Length)
             {
                 return false;
