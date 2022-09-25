@@ -21,7 +21,7 @@ namespace CaremetxAnagramExercise.Models
         {
             //check the length of both texts 
             //Space matters : 'listen' and 's ilent' are not Anagrams but 'listen' and 'silent' are Anagrams
-            if(text1.Length!=text2.Length)
+            if(text1.Length!=text2.Length )
             {
                 return false;
             }

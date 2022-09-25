@@ -20,9 +20,13 @@
     <p style="color: @ViewBag.color">
         @if (ViewBag.Text != null)
         {
-            <b>@ViewBag.Text.text1</b> <span> and </span> <b>@ViewBag.Text.text2</b> @ViewBag.response
+        <b>@ViewBag.Text.text1</b>  <span> and </span>  <b>@ViewBag.Text.text2</b>  @ViewBag.response
 
         }
+        else {
+        <b>        @ViewBag.Wrong</b> 
+        }
+
 
     </p>
 

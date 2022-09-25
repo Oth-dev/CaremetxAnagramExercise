@@ -24,19 +24,28 @@ namespace CaremetxAnagramExercise.Controllers
         }
         public IActionResult CheckAnagram(string text1, string text2)
         {
-            TextInput input = new TextInput(text1, text2);
-            ViewBag.Text = input;
-            if(input.AreAnagram())
+            if( text1 == null || text2 == null)
             {
-                ViewBag.response =" are Anagrams";
-                ViewBag.color = "green";
+                ViewBag.color = "orange";
+                ViewBag.Wrong = "Wrong values entered !!!";
             }
             else
             {
-                ViewBag.response =" are not Anagrams";
-                ViewBag.color = "red";
+                TextInput input = new TextInput(text1, text2);
+                ViewBag.Text = input;
+                if (input.AreAnagram())
+                {
+                    ViewBag.response = " are Anagrams";
+                    ViewBag.color = "green";
+                }
+                else
+                {
+                    ViewBag.response = " are not Anagrams";
+                    ViewBag.color = "red";
 
+                }
             }
+            
 
             return View("Index");
         }
