@@ -24,7 +24,8 @@ namespace CaremetxAnagramExercise.Controllers
         }
         public IActionResult CheckAnagram(string text1, string text2)
         {
-            if( text1 == null || text2 == null)
+            //value entered should be correct
+            if( text1 == null || text2 == null || text1.Trim()=="" || text2.Trim()=="")
             {
                 ViewBag.color = "orange";
                 ViewBag.Wrong = "Wrong values entered !!!";
