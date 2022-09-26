@@ -25,12 +25,17 @@ namespace CaremetxAnagramExercise.Controllers
         public IActionResult CheckAnagram(string text1, string text2)
         {
             //value entered should be correct
-            if( text1 == null || text2 == null || text1.Trim()=="" || text2.Trim()=="")
+            if (text1 == null || text2 == null || text1.Trim() == "" || text2.Trim() == "")
             {
                 ViewBag.color = "orange";
                 ViewBag.Wrong = "Wrong values entered !!!";
             }
-            else
+            else if (text1==text2)
+                {
+                    ViewBag.color = "gray";
+                    ViewBag.Wrong = "The entries should not be similar !!!";
+                }
+                else
             {
                 TextInput input = new TextInput(text1.Trim(), text2.Trim());
                 ViewBag.Text = input;

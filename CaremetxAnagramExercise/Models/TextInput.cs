@@ -21,11 +21,11 @@ namespace CaremetxAnagramExercise.Models
         {
             //check the length of both texts 
             //Space matters : 'listen' and 's ilent' are not Anagrams but 'listen' and 'silent' are Anagrams
-            if(text1.Length!=text2.Length )
+            if (text1.Length != text2.Length)
             {
                 return false;
             }
-            else
+            else if (text1 != text2)// the two entries should be distinct
             {
                 //Converting the string to an array of char and all in lower case
                 char[] array1 = text1.ToLower().ToCharArray();
@@ -44,6 +44,7 @@ namespace CaremetxAnagramExercise.Models
                 else
                     return false;
             }
+            else return false;
            
         }
         public bool AreAnagram()
@@ -55,7 +56,7 @@ namespace CaremetxAnagramExercise.Models
             {
                 return false;
             }
-            else
+            else if (this.text1 != this.text2)// the two entries should be distinct
             {
                 //Converting the string to an array of char and all in lower case
                 char[] array1 = this.text1.ToLower().ToCharArray();
@@ -74,6 +75,7 @@ namespace CaremetxAnagramExercise.Models
                 else
                     return false;
             }
+            else return false;
         }
     }
 }
