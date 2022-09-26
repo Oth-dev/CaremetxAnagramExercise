@@ -32,7 +32,7 @@ namespace CaremetxAnagramExercise.Controllers
             }
             else
             {
-                TextInput input = new TextInput(text1, text2);
+                TextInput input = new TextInput(text1.Trim(), text2.Trim());
                 ViewBag.Text = input;
                 if (input.AreAnagram())
                 {
